@@ -18,6 +18,10 @@ io.on("connection", socket => {
     socket.on("get-msg", data => {
         socket.broadcast.emit("get-msg", data);
     })
+
+    socket.on("disconnect", () => {
+        socket.broadcast.emit("user-left", user[socket.id]);
+    })
 })
 
 express.get("/", (req, res) => {
