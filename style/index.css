@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.chatbox {
+
+}
+
+.chatbox .joined {
+    text-align: center;
+}
+
+.chatbox .joined span {
+    color: #FFF;
+    font-weight: bold;
+    background: #222;
+    padding: .2rem .5rem;
+    border-radius: .4rem;
+}
+
+.chatbox .send {
+    text-align: right;
+}
+
+.chatbox .send span {
+    color: #FFF;
+    font-weight: bold;
+    background: rgb(129, 129, 129);
+    padding: .2rem .5rem;
+    border-radius: .4rem;
+}
+
+.chatbox .recieve {
+    text-align: left;
+}
+
+.chatbox .recieve span {
+    color: #FFF;
+    font-weight: bold;
+    background: rgb(87, 211, 87);
+    padding: .2rem .5rem;
+    border-radius: .4rem;
+}
+
+.chat__area {
+    width: 100%;
+    padding: 1rem 1rem .2rem;
+    margin-top: auto;
+    background: #f5f5f5;
+}
