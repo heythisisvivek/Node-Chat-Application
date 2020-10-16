@@ -4,6 +4,10 @@ const container = document.querySelector(".chatbox");
 const form = document.querySelector(".form");
 const input = document.querySelector(".msg");
 
+if(Push.Permission.has() != "false") {
+    Push.create('All set')
+}
+
 const getname = prompt("Enter your name");
 
 if(getname) {
@@ -45,5 +49,6 @@ socket.on("joined-chat", data => {
 })
 
 socket.on("get-msg", data => {
+    Push.create(data);
     appendrecievemsg(`<span>${data}</span>`);
 })
