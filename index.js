@@ -1,6 +1,13 @@
 const expressObj = require("express");
-const io = require("socket.io")(3000);
 const express = expressObj();
+const io = require("socket.io")(3000, {
+    cors: {
+        origin: "http://localhost:3300",
+        methods: ["GET", "POST"],
+        allowedHeaders: ["my-custom-header"],
+        credentials: true
+    }
+});
 const path = require("path");
 require("dotenv").config();
 
